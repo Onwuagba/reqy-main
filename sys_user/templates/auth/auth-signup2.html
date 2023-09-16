@@ -1,0 +1,54 @@
+{% extends 'auth/base/auth-base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %} 
+  Signup
+{% endblock %}
+{% block content %}
+      <div class="az-column-signup">
+        <h1 class="az-logo"></h1>
+        <div class="az-signup-header">
+          <h3>Sign up for FREE</h3>
+          <small class="form-text" style="color:#000;" >
+            **All fields are required
+          </small><br>
+          
+          
+          <!-- <form action="#" class="authForm" method="post" novalidate> -->
+            
+            <div class="invalid-feedback">
+              Please enter a valid phone number.
+            </div>
+            {% csrf_token %}
+            <!-- {{ form.as_p }} -->
+            {% crispy form %}
+            <!-- <button class="btn btn-az-primary btn-block" type="submit">Create Account</button> -->
+          <!-- </form> -->
+
+          <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (function() {
+                'use strict';
+                window.addEventListener('load', function() {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('authForm');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                    }, false);
+                });
+                }, false);
+            })();
+            </script>
+            
+        </div><!-- az-signup-header -->
+        <div class="az-signup-footer">
+          <p>Already have an account? <a href="{% url 'sys_user:login' %}">Log in</a></p>
+        </div><!-- az-signin-footer -->
+      </div><!-- az-column-signup -->
+{% endblock %}    

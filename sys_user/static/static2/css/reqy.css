@@ -1,0 +1,61 @@
+.navbar-bg{
+    background-color: #1f326f;
+}
+
+.main-sidebar .sidebar-menu li.active a{
+    color: #DAA520;
+}
+
+.bg-cve{
+    background-color: #1f326f !important;
+}
+
+.bg-cve-pry, .btn-cve-pry{
+    background-color: #DAA520 !important;
+    color: #fff;
+    margin: 0 5px;
+}
+
+.price-pry{
+    background-color: #DAA520 !important;
+}
+
+.bg-danger{
+    background-color:#ff0000 !important;
+}
+/* .btn-cve-pry{
+    background-color: #DAA520 !important;
+} */
+
+.btn-cve{
+    color: #fff;
+    background-color: #1f326f !important;
+    border-color: #1f326f !important;
+}
+
+.btn-cve:hover{
+    background-color: #DAA520 !important;
+    color: #fff !important;
+    /* border: 1px solid #1f326f !important; */
+}
+
+.badge-cve-pry{
+    background-color: #1f326f;
+    color: #fff;
+}
+
+.badge-cve{
+    background-color: #DAA520;
+    color: #fff;
+}
+
+.section .section-title:before{
+    background-color: #DAA520;
+}
+
+
+/* .dash_head:hover{
+    text-decoration: none;
+    color: #1f326f;
+    box-shadow: 5px 10px #888888;
+} */

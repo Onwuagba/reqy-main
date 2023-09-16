@@ -1,0 +1,21 @@
+.my-btn::after{
+    content: ' >>';
+    display: inline-block;
+    color: #888888;
+    opacity: 0;
+}
+
+.my-btn:hover{
+    transform: none;
+}
+
+.my-btn:hover::after{
+    opacity: 1;
+    white-space: pre; 
+    font-weight: 900;
+    vertical-align: middle;
+}
+
+::placeholder{
+    font-size: 11px;
+}

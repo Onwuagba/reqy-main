@@ -1,0 +1,58 @@
+﻿{% extends 'auth/base/auth-base.html' %}
+{% block title %} 
+  Forgot Password
+{% endblock %}
+{% block content %}
+      <div class="az-column-signup">
+        <h1 class="az-logo"></h1>
+        
+        <div class="az-signup-header">
+            <h3>Forgot your password?</h3>
+            <p>Enter your email address to receive a password reset link</p>
+            <form action="#" class="authForm" novalidate>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" class="form-control"  id="validationCustom02" required>
+                <div class="invalid-feedback">
+                  Your email is required
+                </div>
+              </div><!-- form-group -->
+              <div class="row justify-content-center" style="margin-bottom: 1em;">
+                <div class="col-md-6 d-flex">
+                  <!-- Checkbox -->
+                    <button class="btn btn-az-primary my-btn" type="submit">Send</button>
+                </div>
+        
+                <div class="col-md-6 d-flex justify-content-center" style="text-align:right;">
+                  <!-- Simple link -->
+                  <a href="{% url 'sys_user:login' %}">Back to <strong>login</strong></a>
+                </div>
+              </div>
+            </form>
+            
+            <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (function() {
+                'use strict';
+                window.addEventListener('load', function() {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('authForm');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                    }, false);
+                });
+                }, false);
+            })();
+            </script>
+          </div><!-- az-signup-header -->
+        <div class="az-signup-footer">
+          <p>Don't have an account? <a href="{% url 'sys_user:signUp' %}">Sign up for FREE!</a></p>
+        </div><!-- az-signin-footer -->
+      </div><!-- az-column-signup -->
+{% endblock %}    
